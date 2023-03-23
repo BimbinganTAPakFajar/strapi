@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "landing_pages",
+  "info": {
+    "singularName": "landing-page",
+    "pluralName": "landing-pages",
+    "displayName": "LandingPage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "headerTitle": {
+      "type": "richtext"
+    },
+    "organizerStrength": {
+      "type": "json"
+    },
+    "jumbotronImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "weddingStats": {
+      "type": "json"
+    },
+    "headerDescription": {
+      "type": "text"
+    }
+  }
+}

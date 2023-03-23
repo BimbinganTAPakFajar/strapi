@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "histories",
+  "info": {
+    "singularName": "history",
+    "pluralName": "histories",
+    "displayName": "AboutUs",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "history": {
+      "type": "json"
+    },
+    "aboutDesc": {
+      "type": "richtext"
+    },
+    "aboutTitle": {
+      "type": "string"
+    }
+  }
+}
