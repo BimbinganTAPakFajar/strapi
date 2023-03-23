@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * history service
+ * about-us service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::history.history');
+module.exports = createCoreService('api::about-us.about-us');

@@ -1,11 +1,10 @@
 {
   "kind": "singleType",
-  "collectionName": "histories",
+  "collectionName": "about_uses",
   "info": {
-    "singularName": "history",
-    "pluralName": "histories",
-    "displayName": "AboutUs",
-    "description": ""
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "aboutUs"
   },
   "options": {
     "draftAndPublish": true
