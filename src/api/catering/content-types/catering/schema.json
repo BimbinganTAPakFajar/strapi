@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "caterings",
+  "info": {
+    "singularName": "catering",
+    "pluralName": "caterings",
+    "displayName": "catering",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "price": {
+      "type": "biginteger"
+    },
+    "food": {
+      "type": "json"
+    },
+    "location": {
+      "type": "text"
+    },
+    "identifier": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::identifier.identifier"
+    }
+  }
+}

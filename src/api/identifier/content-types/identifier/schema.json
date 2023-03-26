@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identifiers",
+  "info": {
+    "singularName": "identifier",
+    "pluralName": "identifiers",
+    "displayName": "identifier",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "types": {
+      "type": "enumeration",
+      "enum": [
+        "partner",
+        "crew"
+      ]
+    }
+  }
+}
