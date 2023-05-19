@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "photographers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::photographer.photographer",
+      "inversedBy": "orders"
+    },
+    "decoration_vendor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::decoration-vendor.decoration-vendor",
+      "inversedBy": "order"
+    },
+    "caterings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::catering.catering",
+      "inversedBy": "orders"
+    },
+    "master_ceremonies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::master-ceremony.master-ceremony",
+      "inversedBy": "orders"
+    },
+    "make_up_artists": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::make-up-artist.make-up-artist",
+      "inversedBy": "orders"
+    },
+    "Date": {
+      "type": "date",
+      "required": true
+    },
+    "venue": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::venue.venue",
+      "inversedBy": "orders"
+    },
+    "totalPrice": {
+      "type": "integer"
+    },
+    "uuid": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "orders"
+    },
+    "payStatus": {
+      "type": "string",
+      "default": "not pay"
+    },
+    "package": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::package.package",
+      "inversedBy": "orders"
+    }
+  }
+}

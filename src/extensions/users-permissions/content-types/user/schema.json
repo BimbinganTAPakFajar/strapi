@@ -65,24 +65,42 @@
     },
     "identifier": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::identifier.identifier"
+      "relation": "manyToOne",
+      "target": "api::identifier.identifier",
+      "inversedBy": "users"
     },
     "photographers": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::photographer.photographer"
+      "target": "api::photographer.photographer",
+      "mappedBy": "user"
     },
     "caterings": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::catering.catering"
+      "target": "api::catering.catering",
+      "mappedBy": "user"
     },
     "venues": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::venue.venue",
       "mappedBy": "user"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "user"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "make_up_artists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::make-up-artist.make-up-artist",
+      "mappedBy": "users_permissions_user"
     }
   }
 }

@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "make_up_artists",
+  "info": {
+    "singularName": "make-up-artist",
+    "pluralName": "make-up-artists",
+    "displayName": "makeUpArtist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "serviceProvided": {
+      "type": "text"
+    },
+    "identifier": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::identifier.identifier",
+      "inversedBy": "make_up_artists"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "mappedBy": "make_up_artists"
+    },
+    "portofolioLink": {
+      "type": "string"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "make_up_artists"
+    }
+  }
+}

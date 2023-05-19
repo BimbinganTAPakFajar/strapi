@@ -15,9 +15,46 @@
     "types": {
       "type": "enumeration",
       "enum": [
-        "partner",
-        "crew"
+        "Partner",
+        "Crew",
+        "User"
       ]
+    },
+    "users": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "identifier"
+    },
+    "photographers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::photographer.photographer",
+      "mappedBy": "identifier"
+    },
+    "venues": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::venue.venue",
+      "mappedBy": "identifier"
+    },
+    "master_ceremonies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::master-ceremony.master-ceremony",
+      "mappedBy": "identifier"
+    },
+    "make_up_artists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::make-up-artist.make-up-artist",
+      "mappedBy": "identifier"
+    },
+    "caterings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::catering.catering",
+      "mappedBy": "identifier"
     }
   }
 }

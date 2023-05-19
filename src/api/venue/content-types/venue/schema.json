@@ -43,14 +43,36 @@
     },
     "identifier": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::identifier.identifier"
+      "relation": "manyToOne",
+      "target": "api::identifier.identifier",
+      "inversedBy": "venues"
     },
     "user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
       "inversedBy": "venues"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "venues"
+    },
+    "packages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::package.package",
+      "mappedBy": "venue"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "mappedBy": "venue"
+    },
+    "venueLink": {
+      "type": "string"
     }
   }
 }

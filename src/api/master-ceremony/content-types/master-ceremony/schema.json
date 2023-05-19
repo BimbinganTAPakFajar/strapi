@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "master_ceremonies",
+  "info": {
+    "singularName": "master-ceremony",
+    "pluralName": "master-ceremonies",
+    "displayName": "masterCeremony",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "text"
+    },
+    "identifier": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::identifier.identifier",
+      "inversedBy": "master_ceremonies"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "serviceProvided": {
+      "type": "text"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "mappedBy": "master_ceremonies"
+    }
+  }
+}

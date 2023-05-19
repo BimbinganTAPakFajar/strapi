@@ -15,38 +15,44 @@
     "yearExperience": {
       "type": "integer"
     },
-    "avatar": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "portofolio": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "skills": {
-      "type": "json"
-    },
     "identifier": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::identifier.identifier"
+      "relation": "manyToOne",
+      "target": "api::identifier.identifier",
+      "inversedBy": "photographers"
     },
     "price": {
       "type": "biginteger"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "photographers"
+    },
+    "serviceProvided": {
+      "type": "text"
+    },
+    "packages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::package.package",
+      "mappedBy": "photographer"
+    },
+    "portofolioLink": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "mappedBy": "photographers"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }

@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "price": {
-      "type": "biginteger"
-    },
     "food": {
       "type": "json"
     },
@@ -23,8 +20,30 @@
     },
     "identifier": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::identifier.identifier"
+      "relation": "manyToOne",
+      "target": "api::identifier.identifier",
+      "inversedBy": "caterings"
+    },
+    "name": {
+      "type": "string"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "caterings"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::order.order",
+      "mappedBy": "caterings"
+    },
+    "packages": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::package.package",
+      "mappedBy": "catering"
     }
   }
 }

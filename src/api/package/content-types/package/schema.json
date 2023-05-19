@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packages",
+  "info": {
+    "singularName": "package",
+    "pluralName": "packages",
+    "displayName": "Package",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "packageName": {
+      "type": "string"
+    },
+    "decoration_vendors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::decoration-vendor.decoration-vendor"
+    },
+    "make_up_artists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::make-up-artist.make-up-artist"
+    },
+    "master_ceremonies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::master-ceremony.master-ceremony"
+    },
+    "descriptionPackage": {
+      "type": "text"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "packages"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "packageName"
+    },
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order",
+      "private": true,
+      "mappedBy": "package"
+    },
+    "basePrice": {
+      "type": "integer"
+    },
+    "catering": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::catering.catering",
+      "inversedBy": "packages"
+    },
+    "photographer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::photographer.photographer",
+      "inversedBy": "packages"
+    },
+    "venue": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::venue.venue",
+      "inversedBy": "packages"
+    },
+    "decoration_vendor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::decoration-vendor.decoration-vendor",
+      "inversedBy": "packages"
+    }
+  }
+}
