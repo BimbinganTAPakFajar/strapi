@@ -100,7 +100,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::make-up-artist.make-up-artist",
-      "mappedBy": "users_permissions_user"
+      "mappedBy": "user"
     }
   }
 }
