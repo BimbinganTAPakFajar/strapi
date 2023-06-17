@@ -101,6 +101,11 @@
       "relation": "oneToMany",
       "target": "api::make-up-artist.make-up-artist",
       "mappedBy": "user"
+    },
+    "isAdmin": {
+      "type": "boolean",
+      "default": false,
+      "required": true
     }
   }
 }
