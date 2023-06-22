@@ -38,8 +38,9 @@
     },
     "identifier": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::identifier.identifier"
+      "relation": "manyToOne",
+      "target": "api::identifier.identifier",
+      "inversedBy": "bands"
     }
   }
 }
