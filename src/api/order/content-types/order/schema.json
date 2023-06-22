@@ -73,6 +73,12 @@
       "relation": "manyToOne",
       "target": "api::package.package",
       "inversedBy": "orders"
+    },
+    "bands": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::band.band",
+      "mappedBy": "orders"
     }
   }
 }

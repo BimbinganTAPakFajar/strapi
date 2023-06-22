@@ -76,6 +76,12 @@
       "relation": "manyToOne",
       "target": "api::decoration-vendor.decoration-vendor",
       "inversedBy": "packages"
+    },
+    "band": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::band.band",
+      "inversedBy": "packages"
     }
   }
 }

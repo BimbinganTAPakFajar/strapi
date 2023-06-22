@@ -17,7 +17,8 @@
       "enum": [
         "Partner",
         "Crew",
-        "User"
+        "User",
+        "Admin"
       ]
     },
     "users": {
