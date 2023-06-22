@@ -35,6 +35,11 @@
     },
     "portofolioLink": {
       "type": "string"
+    },
+    "identifier": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::identifier.identifier"
     }
   }
 }
