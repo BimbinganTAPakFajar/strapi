@@ -79,6 +79,12 @@
       "relation": "manyToMany",
       "target": "api::band.band",
       "mappedBy": "orders"
+    },
+    "startEvent": {
+      "type": "string"
+    },
+    "endEvent": {
+      "type": "string"
     }
   }
 }
